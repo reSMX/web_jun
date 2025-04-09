@@ -77,7 +77,7 @@
   color: #006a8d;
 }
 
-.registration.container,
+.registration-container,
 .login-container {
   width: 100%;
   max-width: 600px;
@@ -88,7 +88,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.registration.title,
+.registration-title,
 .login-title {
   text-align: center;
   font-size: 2rem;
