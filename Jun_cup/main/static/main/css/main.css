@@ -1,11 +1,16 @@
-/* Основной фон и шрифт */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .main-body {
   background-color: #ffffff;
   color: #1a202c;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Навигация */
 .header {
   background-color: #e0e7ff;
 }
@@ -32,7 +37,6 @@
   color: #0087bf;
 }
 
-/* Кнопки */
 .auth-buttons a,
 .upload-button {
   margin-right: 0.5rem;
@@ -63,7 +67,6 @@
   background-color: #006a8d;
 }
 
-/* Навигационные ссылки */
 .nav-links {
   list-style: none;
   display: flex;
@@ -84,7 +87,6 @@
   color: #006a8d;
 }
 
-/* Hero */
 .hero {
   padding: 100px 0;
 }
@@ -101,7 +103,6 @@
   margin-bottom: 2rem;
 }
 
-/* Features */
 .features {
   background-color: #0087bf;
   color: white;

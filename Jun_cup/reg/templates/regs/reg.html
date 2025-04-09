@@ -1,237 +1,64 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Регистрация</title>
-    <style>
-        .main-body {
-          background-color: #ffffff;
-          color: #1a202c;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .header {
-          background-color: #e0e7ff;
-        }
-
-        .navbar {
-          padding: 1rem 0;
-        }
-
-        .logo {
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-        }
-
-        .logo img {
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-        }
-
-        .site-title {
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: #0087bf;
-        }
-
-        .auth-buttons a,
-        .upload-button {
-          margin-right: 0.5rem;
-          padding: 0.5rem 1rem;
-          font-size: 0.9rem;
-          border-radius: 0.375rem;
-          text-decoration: none;
-        }
-
-        .btn-login {
-          color: #333;
-          background-color: #f8f9fa;
-          border: 1px solid #ccc;
-        }
-
-        .btn-login:hover {
-          background-color: #e2e6ea;
-        }
-
-        .btn-upload,
-        .upload-button {
-          background-color: #0087bf;
-          color: white;
-        }
-
-        .btn-upload:hover,
-        .upload-button:hover {
-          background-color: #006a8d;
-        }
-
-        .nav-links {
-          list-style: none;
-          display: flex;
-          margin-top: 1rem;
-          padding-left: 0;
-        }
-
-        .nav-links li {
-          margin-right: 1.5rem;
-        }
-
-        .nav-links a {
-          color: #000;
-          text-decoration: none;
-        }
-
-        .nav-links a:hover {
-          color: #006a8d;
-        }
-
-        .hero {
-          padding: 100px 0;
-        }
-
-        .hero-title {
-          font-size: 3rem;
-          font-weight: bold;
-        }
-
-        .hero-subtitle {
-          font-size: 1.2rem;
-          color: #4a5568;
-          margin-top: 1rem;
-          margin-bottom: 2rem;
-        }
-
-        .features {
-          background-color: #0087bf;
-          color: white;
-          padding: 60px 0;
-        }
-
-        .features-subtitle {
-          font-size: 1rem;
-          color: #c3dafe;
-        }
-
-        .features-title {
-          font-size: 2rem;
-          font-weight: bold;
-        }
-
-        .features-description {
-          font-size: 1.1rem;
-          color: #c3dafe;
-          margin-top: 1rem;
-        }
-
-        .feature-item h3 {
-          font-size: 1.25rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .feature-item p {
-          color: #c3dafe;
-        }
-
-        .registration-container {
-          width: 100%;
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 2rem;
-          background-color: #f9fafb;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .registration-title {
-          text-align: center;
-          font-size: 2rem;
-          font-weight: bold;
-          margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-          margin-bottom: 1rem;
-        }
-
-        .form-label {
-          display: block;
-          font-size: 1rem;
-          font-weight: 500;
-          margin-bottom: 0.5rem;
-        }
-
-        .form-input {
-          width: 100%;
-          padding: 0.75rem;
-          font-size: 1rem;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          box-sizing: border-box;
-        }
-
-        .submit-button {
-          width: 100%;
-          padding: 1rem;
-          font-size: 1rem;
-          background-color: #0087bf;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-
-        .submit-button:hover {
-          background-color: #006a8d;
-        }
-
-        .login-link {
-          text-align: center;
-          margin-top: 1rem;
-        }
-
-        .login-link a {
-          color: #0087bf;
-          text-decoration: none;
-        }
-
-        .login-link a:hover {
-          color: #006a8d;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'reg/css/reg.css' %}">
 </head>
 <body class="main-body">
-    <div class="registration-container">
-        <h2 class="registration-title">Регистрация</h2>
-        <form method="POST" action="http://localhost:8001/reg/">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="username" class="form-label">Имя пользователя</label>
-                <input type="text" name="username" id="username" class="form-input" required>
-            </div>
 
-            <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" id="email" class="form-input" required>
-            </div>
+  <header class="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="{% static 'img/header_future-makers.svg' %}" alt="Logo" />
+          <span class="site-title">Система анализа рекламных вывесок</span>
+        </a>
+        <div class="auth-buttons">
+          <a href="/sign_detect" class="btn btn-upload">Загрузить изображение</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Главная</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-            <div class="form-group">
-                <label for="password" class="form-label">Пароль</label>
-                <input type="password" name="password" id="password" class="form-input" required>
-            </div>
+  <div class="registration-container">
+    <h2 class="registration-title">Регистрация</h2>
+    <form method="POST" action="http://localhost:8001/reg/">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username" class="form-label">Имя пользователя</label>
+            <input type="text" name="username" id="username" class="form-input" required>
+        </div>
 
-            <div class="form-group">
-                <label for="confirm_password" class="form-label">Подтверждение пароля</label>
-                <input type="password" name="confirm_password" id="confirm_password" class="form-input" required>
-            </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-input" required>
+        </div>
 
-            <button type="submit" class="submit-button">Зарегистрироваться</button>
+        <div class="form-group">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" name="password" id="password" class="form-input" required>
+        </div>
 
-            <div class="login-link">
-                Уже есть аккаунт? <a href="/login/">Войти</a>
-            </div>
-        </form>
-    </div>
+        <div class="form-group">
+            <label for="confirm_password" class="form-label">Подтверждение пароля</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="form-input" required>
+        </div>
+
+        <button type="submit" class="submit-button">Зарегистрироваться</button>
+
+        <div class="login-link">
+            Уже есть аккаунт? <a href="/reg/login/">Войти</a>
+        </div>
+    </form>
+  </div>
+
 </body>
 </html>

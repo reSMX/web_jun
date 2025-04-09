@@ -1,0 +1,161 @@
+.main-body {
+  background-color: #ffffff;
+  color: #1a202c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background-color: #e0e7ff;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0087bf;
+}
+
+.auth-buttons a {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+}
+
+.btn-login {
+  color: #333;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+.btn-login:hover {
+  background-color: #e2e6ea;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.nav-links li {
+  margin-right: 1.5rem;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #006a8d;
+}
+
+.hero {
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+.features {
+  padding: 60px 0;
+  background-color: #f0f4ff;
+}
+
+.upload-box,
+.result-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.upload-box h2,
+.result-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #0087bf;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #006a8d;
+}
+
+.result-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+}
+
+.result-grid img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.font-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0087bf;
+  margin-top: 10px;
+}

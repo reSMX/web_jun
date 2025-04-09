@@ -1,11 +1,16 @@
-/* Основной фон и шрифт */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .main-body {
   background-color: #ffffff;
   color: #1a202c;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Навигация */
 .header {
   background-color: #e0e7ff;
 }
@@ -32,7 +37,6 @@
   color: #0087bf;
 }
 
-/* Кнопки */
 .auth-buttons a,
 .upload-button {
   margin-right: 0.5rem;
@@ -40,16 +44,6 @@
   font-size: 0.9rem;
   border-radius: 0.375rem;
   text-decoration: none;
-}
-
-.btn-login {
-  color: #333;
-  background-color: #f8f9fa;
-  border: 1px solid #ccc;
-}
-
-.btn-login:hover {
-  background-color: #e2e6ea;
 }
 
 .btn-upload,
@@ -63,7 +57,6 @@
   background-color: #006a8d;
 }
 
-/* Навигационные ссылки */
 .nav-links {
   list-style: none;
   display: flex;
@@ -84,51 +77,75 @@
   color: #006a8d;
 }
 
-/* Hero */
-.hero {
-  padding: 100px 0;
+.registration.container,
+.login-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: #4a5568;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* Features */
-.features {
-  background-color: #0087bf;
-  color: white;
-  padding: 60px 0;
-}
-
-.features-subtitle {
-  font-size: 1rem;
-  color: #c3dafe;
-}
-
-.features-title {
+.registration.title,
+.login-title {
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-.features-description {
-  font-size: 1.1rem;
-  color: #c3dafe;
-  margin-top: 1rem;
+.form-group {
+  margin-bottom: 1rem;
 }
 
-.feature-item h3 {
-  font-size: 1.25rem;
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.feature-item p {
-  color: #c3dafe;
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #0087bf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #006a8d;
+}
+
+.login-link,
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-link,
+.register-link a {
+  color: #0087bf;
+  text-decoration: none;
+}
+
+
+.login-link a:hover,
+.register-link a:hover {
+  color: #006a8d;
 }

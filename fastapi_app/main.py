@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Form, HTTPException
+from fastapi import FastAPI, Form, HTTPException, Response
 from fastapi.responses import JSONResponse
 import sqlite3
 import hashlib
@@ -32,7 +32,13 @@ create_users_table()
 
 
 @app.post("/reg/")
-async def registration(username: str = Form(...), email: str = Form(...), password: str = Form(...), confirm_password: str = Form(...)) -> JSONResponse:
+async def registration(
+    response: Response,
+    username: str = Form(...),
+    email: str = Form(...),
+    password: str = Form(...),
+    confirm_password: str = Form(...)
+) -> JSONResponse:
 
     if password != confirm_password:
         raise HTTPException(status_code=400, detail="Пароли не совпадают")
@@ -48,9 +54,35 @@ async def registration(username: str = Form(...), email: str = Form(...), passwo
             (username, email, hashed_password)
         )
         conn.commit()
+
+        user_id = cursor.lastrowid
+        response.set_cookie(key="user_id", value=str(user_id), max_age=60*60*24)
     except sqlite3.IntegrityError:
         raise HTTPException(status_code=400, detail="Такой пользователь уже существует")
     finally:
         conn.close()
 
     return JSONResponse(status_code=201, content={"message": "Пользователь успешно зарегистрирован"})
+
+
+@app.post("/login/")
+async def login(response: Response, email: str = Form(...), password: str = Form(...)) -> JSONResponse:
+    conn = create_connection()
+    cursor = conn.cursor()
+
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+
+    try:
+        cursor.execute(
+            "SELECT * FROM users WHERE email = ? AND password = ?",
+            (email, hashed_password)
+        )
+
+        user = cursor.fetchone()
+
+        if not user:
+            raise HTTPException(status_code=400, detail="Неверные имя пользователя или пароль")
+    finally:
+        conn.close()
+
+    return JSONResponse(status_code=200, content={"message": "Успешный вход"})

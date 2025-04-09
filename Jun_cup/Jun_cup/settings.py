@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'reg'
-
+    'reg',
+    'sign_detect'
     ]
 
 MIDDLEWARE = [
