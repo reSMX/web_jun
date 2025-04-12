@@ -78,3 +78,8 @@ python3 manage.py runserver
 
 ### Дизайнеры:
 - [@unicum_adm](https://t.me/unicum_adm)
+
+Интерфейс нашего сайта:
+
+Главная страница
+![Главная страрица](https://raw.githubusercontent.com/reSMX/Sait_photo/main/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D0%BA%D0%B8.png)
