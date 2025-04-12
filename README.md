@@ -84,4 +84,4 @@ python3 manage.py runserver
 Главная страница
 ![Главная страрица](https://raw.githubusercontent.com/reSMX/Sait_photo/main/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D0%BA%D0%B8.png)
 ![Регистрация](https://github.com/reSMX/Sait_photo/raw/main/%D1%80%D0%B5%D0%B3%D0%B5%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F.jpg)
-![Загрузка изображения](https://github.com/reSMX/Sait_photo/rwa/main/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D0%BA%D0%B8.png)
+![Загрузка изображения](https://github.com/reSMX/Sait_photo/raw/main/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D0%BA%D0%B8.png)
